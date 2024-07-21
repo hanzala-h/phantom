@@ -1,0 +1,24 @@
+{
+    "name": "hanzlah/phantom",
+    "description": "\"A PHP MVC framework\"",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Phantom\\": "./"
+        }
+    },
+    "authors": [
+        {
+            "name": "Muhammad Hanzla",
+            "email": "sayhi.hanzla@gmail.com"
+        }
+    ],
+    "scripts": {
+        "serve": "php -S localhost:8000 -t public"
+    },
+    "config": {
+        "process-timeout": 0
+    },
+    "require": {}
+}
