@@ -13,8 +13,6 @@ require_once BASE_PATH . 'Core/Application.php';
 
 $app = new Application();
 
-$app->get('/', function ($req, $res){
-    $res->render('index');
-});
+require_once BASE_PATH . 'routes/web.php';
 
 $app->run();

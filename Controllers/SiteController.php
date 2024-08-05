@@ -9,6 +9,6 @@ class SiteController
 {
     public function index(Request $req, Response $res): void
     {
-        $res->send('Hi');
+        $res->render('index');
     }
 }
