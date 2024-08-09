@@ -44,14 +44,13 @@ class Response
 
     public function send(mixed $data): void
     {
+        echo $data;
+    }
+
+    public function end(mixed $data): void
+    {
         echo "<pre>";
         var_dump($data);
         echo "</pre>";
-    }
-
-    public static function end(mixed $data): void
-    {
-        $self = new Response;
-        $self->send($data);
     }
 }

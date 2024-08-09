@@ -31,7 +31,14 @@ class Router
                     $callback[0] = new $callback[0]();
                 }
 
-                call_user_func($callback, $this->request, $this->response);
+                if (is_callable($callback))
+                {
+                    $res = call_user_func($callback, $this->request, $this->response);
+                    if (is_string($res)){
+                        $this->response->send($res);
+                    }
+                }
+
                 return;
             }
         }
